@@ -8,7 +8,7 @@
 def Fibonacci_f(num):
     #如果num<2时，生成特定的数列
     if num == 0:
-        print("0")
+        print("0")   # 这几个可以省略
     elif num == 1:
         print ("1")
     elif num ==2:
@@ -37,7 +37,7 @@ def Fibonacci_d(num):
 
 
 #迭代器对象方法
-class Fibonacci_i:
+class Fibonacci_i:   # //需要增加初始化方法
     #用前一个和前两个数字的值作为对象的属性
     def __iter__(self):
         self.before_1 = 1
@@ -60,7 +60,7 @@ def fibonacci_g(num):
     while count<num:
         f_num=before_1+before_2
         yield f_num
-        before_2=before_1
+        before_2=before_1  # //这句与yield前面、还有下面一句，合并。
         before_1=f_num
         count+=1
 
